@@ -66,7 +66,14 @@ const EntryHandler = (() => {
     },
     getDataEntries: function() {
       return data[0].entries;
-    }
+		},
+		getIdMap: function() {
+			let newArr = data[0].entries.map(entry => {
+				return entry.id;
+			})
+			console.log(newArr.indexOf(3));
+		}
+		
 	};
 })();
 
@@ -93,3 +100,4 @@ const Controller = (function (EntryHndlr) {
 //   cell1.textContent = item.entry;
 //   cell2.textContent = item.name;
 // })
+
