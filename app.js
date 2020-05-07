@@ -30,9 +30,11 @@ const EntryHandler = (() => {
 
 	// Add all entrys to array of objects.
 
-	const data = [{
-    entries: []
-  }];
+	const data = [
+		{
+			entries: [],
+		},
+	];
 
 	const getTime = function () {
 		const fullDate = new Date();
@@ -47,44 +49,36 @@ const EntryHandler = (() => {
 	};
 
 	const addEntry = function () {
-    let id;
-    if (data[0].entries.length > 0) {
-      id = data[0].entries[data[0].entries.length - 1].id + 1;
-    } else {
-      id = 0;
-    }
-    const time = getTime();
+		let id;
+		if (data[0].entries.length > 0) {
+			id = data[0].entries[data[0].entries.length - 1].id + 1;
+		} else {
+			id = 0;
+		}
+		const time = getTime();
 		const entry = UICtrl.getEntryValue();
 		const name = document.querySelector("#name-entry").value;
 		const newEntry = new Entry(id, time, entry, name);
-    data[0].entries.push(newEntry)
-    // return newEntry;
+		data[0].entries.push(newEntry);
+		// return newEntry;
 	};
 	return {
 		getAddEntry: function () {
 			return addEntry();
-    },
-    getDataEntries: function() {
-      return data[0].entries;
 		},
-		getIdMap: function() {
-			let newArr = data[0].entries.map(entry => {
-				return entry.id;
-			})
-			console.log(newArr.indexOf(3));
-		}
-		
+		getDataEntries: function () {
+			return data[0].entries;
+		},
 	};
 })();
 
 // Takes in the EntryHandler Module, deals only with logic of site
 const Controller = (function (EntryHndlr) {
 	document.querySelector(".submit-button").addEventListener("click", () => {
-    const newEntry = EntryHndlr.getAddEntry();
-    let data = EntryHndlr.getDataEntries();
+		const newEntry = EntryHndlr.getAddEntry();
+		let data = EntryHndlr.getDataEntries();
 	});
 })(EntryHandler);
-
 
 /* 
   TODO: Need to make each Item in Data[0].entries render to UI, without repeating. 
@@ -100,4 +94,3 @@ const Controller = (function (EntryHndlr) {
 //   cell1.textContent = item.entry;
 //   cell2.textContent = item.name;
 // })
-
