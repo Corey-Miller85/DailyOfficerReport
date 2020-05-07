@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Daily Officer Report</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Daily Officer Report</h1>
+      <img src="img/eaglePNG.png" alt="eagle logo">
+    </div>
+    <form class="form">
+      <input type="text" name="new-entry" id="new-entry" placeholder="New Entry">
+      <input type="text" name="officer-name" id='name-entry' placeholder="Officer Name">
+      <input type="button" class='submit-button' value="Submit">
+    </form>
+    <div class="entry-table-div">
+      <table id="table">
+        <thead>
+          <tr>
+            <th class='entry-header-time'>Entry Time</th>
+            <th class='entry-header-message'>Message</th>
+            <th class='entry-header-officer'>Officer</th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

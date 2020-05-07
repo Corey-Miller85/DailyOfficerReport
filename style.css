@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #ddd;
+}
+
+.container {
+  width: 80%;
+  margin:  2rem auto;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header img {
+  width: 150px;
+  height: 150px;
+  margin-left: 57%;
+}
+.header h1 {
+  text-transform: uppercase;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#new-entry {
+  width: 20%;
+  height: 2rem;
+  margin: 1rem 1rem;
+  background: #ccc;
+  border: 1px solid #3333;
+}
+#name-entry {
+  width: 20%;
+  height: 2rem;
+  margin: 1rem 1rem;
+  background: #ccc;
+  border: 1px solid #3333;
+}
+
+.submit-button {
+  width: 100px;
+  height: 2rem;
+  background: teal;
+  border: none;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  word-wrap: break-word ;
+
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.table-body tr:first-child {
+  width: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #222;
+}
+
+.entry-header-time {
+  width: 175px;
+}
+
+.entry-header-message {
+  width: 20rem;
+}
+
+.entry-header-officer {
+  width: 175px;
+}
